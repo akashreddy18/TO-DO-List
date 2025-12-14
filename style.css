@@ -6,24 +6,28 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #f4f4f4;
+  padding: 20px;
 }
 
 .todo-container {
   background: #fff;
   padding: 25px;
-  width: 320px;
+  width: 90%;         /* responsive width */
+  max-width: 400px;   /* optional maximum width */
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 0 auto;
 }
 
 h1 {
   text-align: center;
   margin-bottom: 15px;
+  font-size: 1.8rem;
 }
 
 .input-box {
@@ -33,16 +37,20 @@ h1 {
 
 input {
   flex: 1;
-  padding: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 button {
-  padding: 8px 12px;
+  padding: 10px 15px;
   border: none;
   background: #007bff;
   color: white;
   cursor: pointer;
   border-radius: 4px;
+  font-size: 1rem;
 }
 
 button:hover {
@@ -52,16 +60,18 @@ button:hover {
 ul {
   list-style: none;
   margin-top: 15px;
+  padding: 0;
 }
 
 li {
   background: #f1f1f1;
-  padding: 8px;
+  padding: 10px;
   margin-bottom: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 4px;
+  font-size: 1rem;
 }
 
 li.completed {
@@ -76,4 +86,22 @@ li.completed {
   padding: 4px 8px;
   cursor: pointer;
   border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments for very small screens */
+@media (max-width: 480px) {
+  .todo-container {
+    padding: 15px;
+  }
+
+  input, button {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  li {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
 }
