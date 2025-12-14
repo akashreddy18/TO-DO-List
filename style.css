@@ -6,19 +6,18 @@
 }
 
 body {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f4f4f4;
-  padding: 20px;
+min-height: 100vh; 
+display: block;     
+background: #f4f4f4;
+padding: 20px;
+margin: 0;
 }
 
 .todo-container {
   background: #fff;
   padding: 25px;
-  width: 90%;         /* responsive width */
-  max-width: 400px;   /* optional maximum width */
+  width: 90%;        
+  max-width: 400px;   
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   margin: 0 auto;
@@ -89,7 +88,7 @@ li.completed {
   font-size: 0.9rem;
 }
 
-/* Responsive adjustments for very small screens */
+
 @media (max-width: 480px) {
   .todo-container {
     padding: 15px;
@@ -105,3 +104,4 @@ li.completed {
     font-size: 0.9rem;
   }
 }
+
